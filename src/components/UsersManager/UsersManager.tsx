@@ -5,9 +5,7 @@ import { UserListItemProps } from '../UserListItem/UserListItem.types'
 import { FormDataType } from '../UserForm/UserForm.types'
 
 const UsersManager = () => {
-  const [users, setUsers] = useState<UserListItemProps[]>([
-    { firstName: 'meo' },
-  ])
+  const [users, setUsers] = useState<UserListItemProps[]>([])
 
   const onSubmit = (data: FormDataType) => {
     setUsers((prev) => [...prev, data])

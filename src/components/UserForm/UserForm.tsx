@@ -3,7 +3,7 @@ import { FormDataType, UserFormProps } from './UserForm.types'
 
 const UserForm = (props: UserFormProps) => {
   const { onSubmit } = props
-  const { control, handleSubmit } = useForm<FormDataType>({
+  const { control, handleSubmit, reset } = useForm<FormDataType>({
     defaultValues: {
       firstName: '',
     },
@@ -11,6 +11,7 @@ const UserForm = (props: UserFormProps) => {
 
   const onFormSubmit = (data: FormDataType) => {
     onSubmit(data)
+    reset()
   }
 
   return (

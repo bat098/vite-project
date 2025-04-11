@@ -3,11 +3,9 @@ import UsersManager from './components/UsersManager/UsersManager'
 
 function App() {
   return (
-    <>
-      <div>
-        <UsersManager />
-      </div>
-    </>
+    <div className="app">
+      <UsersManager />
+    </div>
   )
 }
 
