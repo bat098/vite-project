@@ -16,11 +16,20 @@ const UserForm = (props: UserFormProps) => {
 
   return (
     <form onSubmit={handleSubmit(onFormSubmit)}>
+      <label htmlFor="firstName">First Name</label>
       <Controller
         name="firstName"
         control={control}
-        render={({ field }) => <input {...field} />}
+        render={({ field }) => (
+          <input
+            id="firstName"
+            type="text"
+            placeholder="First name"
+            {...field}
+          />
+        )}
       />
+
       <button type="submit">Submit</button>
     </form>
   )
